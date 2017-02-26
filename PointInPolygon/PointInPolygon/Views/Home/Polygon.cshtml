@@ -1,0 +1,55 @@
+﻿@model PointInPolygon.Models.PointViewModel
+
+@{
+    ViewBag.Title = "Проверка точки";
+    string polygonFileName = ViewBag.PolygonFileName;
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Проверить точку</h2>
+
+        <p>Введите координаты точки либо выберите случайную точку</p>
+       
+        @using (Ajax.BeginForm("CheckPoint", "Home", new { isRandomPoint = false, baseImageFileName = polygonFileName }, new AjaxOptions
+        {
+            UpdateTargetId = "result",
+            LoadingElementId = "loading",
+            LoadingElementDuration = 1000
+        }))
+        {
+            <div class="form-group">
+                @Html.LabelFor(point => point.X)
+                @Html.EditorFor(point => point.X)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(point => point.Y)
+                @Html.EditorFor(point => point.Y)
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Проверить" />
+        }
+
+        <div style="height:10px"></div>
+
+        @using (Ajax.BeginForm("CheckPoint", "Home", new { isRandomPoint = true, baseImageFileName = polygonFileName }, new AjaxOptions
+        {
+            UpdateTargetId = "result",
+            LoadingElementId = "loading",
+            LoadingElementDuration = 1000
+        }))
+        {
+            <p><input type="submit" class="btn btn-primary" value="Проверить случайную точку" /></p>
+        }
+
+        <div id="loading" style="display:none; color:Red; font-weight:bold;">
+            <p>Идет загрузка...</p>
+        </div>
+        
+    </div>
+    <div class="col-md-6">
+        <div id="result"><img src="~/images/CreatingPolygon/@polygonFileName" width="640" height="480" class="img-thumbnail"/></div>
+    </div>
+
+</div>

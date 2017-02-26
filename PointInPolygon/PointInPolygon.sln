@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointInPolygon", "PointInPolygon\PointInPolygon.csproj", "{FF926F3F-66FC-44D0-937A-3491C04BCE72}"
+	ProjectSection(ProjectDependencies) = postProject
+		{510FA7D6-E3FA-44C6-A533-446DC89DCD3B} = {510FA7D6-E3FA-44C6-A533-446DC89DCD3B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "..\DotInPolygon\BusinessLogic\BusinessLogic.csproj", "{510FA7D6-E3FA-44C6-A533-446DC89DCD3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{C778FAD0-189E-40EF-B395-220D56593BAB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{510FA7D6-E3FA-44C6-A533-446DC89DCD3B} = {510FA7D6-E3FA-44C6-A533-446DC89DCD3B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF926F3F-66FC-44D0-937A-3491C04BCE72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF926F3F-66FC-44D0-937A-3491C04BCE72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF926F3F-66FC-44D0-937A-3491C04BCE72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF926F3F-66FC-44D0-937A-3491C04BCE72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{510FA7D6-E3FA-44C6-A533-446DC89DCD3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510FA7D6-E3FA-44C6-A533-446DC89DCD3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510FA7D6-E3FA-44C6-A533-446DC89DCD3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510FA7D6-E3FA-44C6-A533-446DC89DCD3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C778FAD0-189E-40EF-B395-220D56593BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C778FAD0-189E-40EF-B395-220D56593BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C778FAD0-189E-40EF-B395-220D56593BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C778FAD0-189E-40EF-B395-220D56593BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

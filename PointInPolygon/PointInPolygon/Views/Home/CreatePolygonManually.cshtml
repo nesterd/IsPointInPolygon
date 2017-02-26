@@ -1,0 +1,57 @@
+﻿@model PointInPolygon.Models.PointViewModel
+@{
+    ViewBag.Title = "Создание полигона";
+    string fileName = ViewBag.FileName;
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Форма добавления вершин полигона</h2>
+        @using (Ajax.BeginForm("AddPoint", new { fileNameToDelete = fileName }, new AjaxOptions { UpdateTargetId = "pointList" }))
+        {
+            <div class="form-group">
+                @Html.LabelFor(point => point.X)
+                @Html.EditorFor(point => point.X)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(point => point.Y)
+                @Html.EditorFor(point => point.Y)
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Добавить" />
+
+        }
+        <div style="height:10px"></div>
+        @using (Ajax.BeginForm("DeletePoint", new { fileNameToDelete = fileName }, new AjaxOptions { UpdateTargetId = "pointList" }))
+        {
+            @*<div class="form-group">
+                @Html.LabelFor(point => point.X)
+                @Html.EditorFor(point => point.X)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(point => point.Y)
+                @Html.EditorFor(point => point.Y)
+            </div>*@
+
+            <input type="submit" class="btn btn-danger" value="Удалить" />
+
+        }
+    </div>
+
+    @*<div id="pointList"></div>*@
+    <div id="pointList">
+        <div class="col-md-3">
+
+        </div>
+
+        <div class="col-md-6">
+            <div id="baseImage"><img src="~/images/Base/BaseImage.png" width="640" height="480" class="img-thumbnail" /></div>
+        </div>
+    </div>
+    
+</div>
+
+
+

@@ -1,0 +1,19 @@
+﻿@model bool
+@{ 
+    string pointName = ViewBag.PointName;
+    string fileName = ViewBag.FileName;
+}
+
+<img src="~/images/PolygonWithPoint/@fileName" width="640" height="480" class="img-thumbnail" />
+
+@if (Model)
+{
+    <div class="alert alert-success" role="alert">Точка @pointName лежит внутри полигона!</div>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">Точка @pointName лежит снаружи полигона!</div>
+}
+
+
+
