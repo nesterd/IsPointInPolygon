@@ -36,19 +36,12 @@ namespace BusinessLogic.Services
         }
         //Реализация паттерна Singleton//
 
-
         int minNumberOfVertices = PolygonPainterSettings.MinNumberOfVertices;
         Polygon _polygon;
         Random _random;
         IEnumerable<Point> _points;
         
         public IEnumerable<Point> Points { get { return _points; } }
-
-        //public PolygonService()
-        //{
-        //    _random = new Random();
-        //    _points = new List<Point>();
-        //}
 
         public void AddPoint(Point pointToAdd)
         {
@@ -112,33 +105,6 @@ namespace BusinessLogic.Services
             return new Point(_random.Next(xMax), _random.Next(yMax));
         }
 
-        //int GetRandomNumberOfVertices(int maxNumberOfVertices)
-        //{
-        //    return _random.Next(minNumberOfVertices, maxNumberOfVertices);
-        //}
-
-        //IEnumerable<Point> GetRandomVertices(int numberOfVertices, int xMax, int yMax)
-        //{
-        //    var vertices = new List<Point>();
-        //    for (int i = 0; i < numberOfVertices; i++)
-        //    {
-        //        var vertex = new Point(_random.Next(xMax), _random.Next(yMax));
-        //        if (!vertices.Contains(vertex))
-        //            vertices.Add(vertex);
-        //    }
-
-        //    return vertices;
-        //}
-        //public void CreateRandomPolygon(int numberOfVertices, int xMax, int yMax)
-        //{
-        //    CreatePolygon(GetRandomVertices(numberOfVertices, xMax, yMax)) ;
-        //    ClearPoints();
-        //}
-
-        //public void CreateRandomPolygonWithRandomNumberOfVertices(int maxNumberOfVertices, int xMax, int yMax)
-        //{
-        //    CreateRandomPolygon(GetRandomNumberOfVertices(maxNumberOfVertices), xMax, yMax);
-        //    ClearPoints();
-        //}
+        
     }
 }
