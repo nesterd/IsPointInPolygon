@@ -29,7 +29,5 @@ namespace BusinessLogic.Helpers.Painters
         {
             return HostingEnvironment.MapPath(FilePath + folder + fileName + FileExtention);
         }
-        
-
     }
 }
