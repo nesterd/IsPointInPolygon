@@ -89,8 +89,7 @@ namespace BusinessLogic.Figures
         {
             return IsCrossPointInLineOX(crossPoint) && IsCrossPointInLineOY(crossPoint);
         }
-            
-
+          
         public bool IsEqual(Line line)
         {
             return a == line.a && b == line.b && c == line.c;
