@@ -70,7 +70,6 @@ namespace BusinessLogic.Services
             {
                 CreatePolygon(_points);
             }
-            
         }
 
         public void CreatePolygon(IEnumerable<Point> points)
@@ -78,7 +77,6 @@ namespace BusinessLogic.Services
             _polygon = new Polygon(points);
             ClearPoints();
         }
-
         
         //Для заданной точки:
         public bool CheckPoint(Point point)
@@ -98,13 +96,9 @@ namespace BusinessLogic.Services
             return CheckPoint(randomPoint);
         }
 
-        
-
         Point GetRandomPoint(int xMax, int yMax)
         {
             return new Point(_random.Next(xMax), _random.Next(yMax));
         }
-
-        
     }
 }
